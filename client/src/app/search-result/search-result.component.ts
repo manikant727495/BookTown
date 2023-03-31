@@ -69,8 +69,5 @@ export class SearchResultComponent implements OnInit {
     });
   }
 
-  openDetailsPage(data:any){
-    console.log(data);
-  }
 
 }
