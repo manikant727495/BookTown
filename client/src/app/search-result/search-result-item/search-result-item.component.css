@@ -17,6 +17,7 @@
     height: 250px;
     background-color: #f0f0f0;
     text-align: center;
+    cursor: pointer;
 }
 
 .search-item-inner-layout{
@@ -52,6 +53,10 @@
     font-weight: normal;
     color: #000000;
     font-size: 24px;
+    cursor: pointer;
+}
+.search-item-heading:hover{
+    color: #aa4a4a
 }
 
 

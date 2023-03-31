@@ -9,7 +9,7 @@ import { UpdateComponent } from './update/update.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 const routes: Routes = [  {path: 'home', component: HomeComponent},
                           {path: 'search-result', component: BookComponent },
-                          {path: 'book/:id', component: BookDetailComponent},
+                          {path: 'bookdetail/:id', component: BookDetailComponent},
                           {path: 'cart', component: CartComponent},
                           {path: 'add',component:AddBookComponent},
                           {path: 'update/:id',component:UpdateComponent},

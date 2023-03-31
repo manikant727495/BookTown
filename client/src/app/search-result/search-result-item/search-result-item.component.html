@@ -1,12 +1,12 @@
 <div class="search-item-layout" [ngClass]="{'search-item-layout-last': lastItem}">
     <div class="search-item-inner-layout">
-        <div class="search-item-image-layout">
+        <div class="search-item-image-layout" (click)="openBookDetail(searchResultItem)">
             <div class="search-item-image-inner-layout" *ngIf="searchResultItem.ImageUrl">
                 <img [src]= searchResultItem.ImageUrl class="book-image"/>
             </div>
         </div>
         <div class="search-item-label">
-            <div class="search-item-description search-item-heading">
+            <div class="search-item-description search-item-heading " (click)="openBookDetail(searchResultItem)">
                 {{searchResultItem.book_name}}
             </div>
             <div class="search-item-description">
