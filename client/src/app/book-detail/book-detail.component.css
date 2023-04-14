@@ -1,0 +1,90 @@
+.book-image-layout{
+    height: 375px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.book-image-inner-layout{
+    height:350px;
+    padding-top: 15px;
+}
+
+.no-image{
+    background-color: #f0f0f0;
+}
+.book-image{
+    min-height: 100%;
+    max-height: 100%;
+}
+.book-detail-inner-layout{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.book-items-layout{
+    margin-top: 20px;
+}
+.book-title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+.book-title-descripition{
+    font-size: 2.1em;
+}
+.book-author-name{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 15px;
+}
+.author-name{
+    color: #d41c1c;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.currency-symbol{
+    position: relative;
+    top: -9px;
+    font-weight: 500;
+}
+
+.price{
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.book-star-rating{
+    font-size: 20px;
+}
+
+.star-image{
+    width: 20px;
+    margin-top: -10px;
+}
+
+.verified-layout{
+    margin-top: 6px;
+}
+
+.verified-text{
+    font-weight: 500;
+    color: #919b87;
+    font-style: italic;
+}
+
+.verified-icon-image{
+    height: 17px;
+    margin-bottom: 3px;
+}
+.book-description-layout{
+    margin-top: 30px;
+}
+.description-heading-layout{
+    margin-bottom: 8px;
+    border-bottom: solid 1px #b6b5b5;
+}
+.description-heading-text{
+    font-size: 30px
+}
+
+

@@ -12,6 +12,10 @@
     box-shadow: 0px 2px #f9f9f9;
 }
 
+.search-item-inner-layout{
+    display: flex;
+}
+
 .search-item-image-layout{
     width: 17%;
     height: 250px;
@@ -20,15 +24,10 @@
     cursor: pointer;
 }
 
-.search-item-inner-layout{
-    display: flex;
-}
-
 .search-item-image-inner-layout{
     height:218px;
     margin-top: 15px;
 }
-
 
 .book-image{
     top: 0;
