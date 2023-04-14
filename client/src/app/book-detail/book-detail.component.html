@@ -1,0 +1,93 @@
+
+<!-- <div class="card">
+  <div class="card-header">book</div>
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-4" *ngIf="selectedBook?.ImageUrl">
+        <img
+          class="center-block img-responsive"
+          [style.height.px]="150"
+          [style.margin.px]="2"
+          [src]="selectedBook?.ImageUrl"
+          [title]="selectedBook?.book_name"
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-3">Name:</div>
+          <div class="col-md-6">{{ selectedBook?.book_name }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Author name:</div>
+          <div class="col-md-6">{{ selectedBook?.author_name }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Description:</div>
+          <div class="col-md-6">{{ selectedBook?.description }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Price:</div>
+          <div class="col-md-6">
+            {{ selectedBook?.price | currency: "&#8377;":"symbol":"1.2-2" }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">5 Star Rating:</div>
+          <div class="col-md-6">
+            {{ selectedBook?.starRating }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary my-3 mx-2" routerLink="/product">Back</button>
+    <button class="btn btn-primary my-3 mx-2" routerLink="/update/{{this.id}}">Edit</button>
+  </div>
+</div> -->
+
+<div class="book-detail-outer-layout">
+  <app-navbar></app-navbar>
+  <div class="book-detail-inner-layout">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="book-image-layout">
+          <div class="book-image-inner-layout" *ngIf="selectedBook?.ImageUrl">
+              <img [src]= selectedBook.ImageUrl class="book-image"/>
+          </div>
+          <div class="book-image-inner-layout no-image" *ngIf="!selectedBook?.ImageUrl">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="book-items-layout">
+          <div class="book-title">
+            <h1 class="book-title-descripition">{{selectedBook.book_name}}</h1>
+          </div>
+          <div class="book-author-name">
+            By <span class="author-name">{{selectedBook.author_name}}</span>
+          </div>
+          <div class="book-price">
+            <span class="currency-symbol">&#8377;</span>
+            <span class="price">{{selectedBook.price}} </span>
+          </div>
+          <div class="book-star-rating">
+            <span class="star-rating">{{selectedBook.starRating}} </span>
+            <img src="assets/images/star.svg" class="star-image"/>
+          </div>
+          <div class="verified-layout">
+            <img src="assets/images/verified-icon.png" alt="verified" class="verified-icon-image"/>
+            <span class="verified-text">Verified</span>
+          </div>
+          <div class="book-description-layout">
+            <div class="description-heading-layout">
+              <h2 class="description-heading-text">Description</h2>
+            </div>
+            <div class="description-body-layout">
+              <p class="description-text">{{selectedBook.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

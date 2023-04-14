@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BookService } from '../book.service';
+import { BookService } from '../services/book.service';
 import { Location } from '@angular/common';
 import { Book } from '../Book';
 
@@ -19,10 +19,10 @@ export class UpdateComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.bookService.getBookById(this.id)
-    .subscribe((data)=>{
-        this.book = data;
-      });
+    // this.bookService.getBookById(this.id)
+    // .subscribe((data)=>{
+    //     this.book = data;
+    //   });
   }
 
   updateBook(formValues: any){

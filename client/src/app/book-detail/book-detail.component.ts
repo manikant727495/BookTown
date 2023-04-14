@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BookService } from "../../book.service";
-import {Book} from  '../../Book';
+import { BookService } from "../services/book.service";
+import {Book} from  '../Book';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,8 +9,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./book-detail.component.css']
 })
 export class BookDetailComponent implements OnInit {
-  public book: Book |null = null;
   public id: string = this.route.snapshot.params.id;
+  selectedBook: any;
 
 
   constructor(
@@ -20,9 +20,9 @@ export class BookDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.bookService.getBookById(this.id)
-    .subscribe((data: Book) => {
-      this.book = data;
-    })
+    .subscribe((data:any) =>{
+      this.selectedBook = data;
+    });
   }
   
 }

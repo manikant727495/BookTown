@@ -9,16 +9,13 @@ router.get('/books',(req, res, next)=>{
     });
 });
 
-router.get('/books/:id',fetchuser,(req, res, next)=>{
+router.get('/:id',(req, res, next)=>{
     Book.findOne({_id:req.params.id},function(err,result){
-        if(err)
-        {
+        if(err) {
             res.json(err);
-        }
-        else{
+        } else {
             res.json(result);
         }
-        
     });
 });
 
@@ -35,7 +32,7 @@ router.put('/update/:id',(req, res)=>{
                 } }
         ).then((result)=>{
             res.status(200).json(result)
-        }).catch((err) => {console.warn(err)})
+    }).catch((err) => {console.warn(err)})
 });
 
 //add Book
