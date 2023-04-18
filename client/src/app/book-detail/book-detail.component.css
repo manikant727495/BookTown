@@ -16,6 +16,24 @@
     min-height: 100%;
     max-height: 100%;
 }
+
+.add-to-cart-layout{
+    margin-top: 20px;
+}
+
+.add-to-cart-button{
+    width: 100%;
+    background-color: orange;
+    border: none;
+    height: 60px;
+    color: white;
+    font-weight: 700;
+}
+
+.cart-icon{
+    margin-right: 5px;
+}
+
 .book-detail-inner-layout{
     padding-left: 5%;
     padding-right: 5%;
@@ -27,14 +45,17 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: normal;
 }
+
 .book-title-descripition{
     font-size: 2.1em;
 }
+
 .book-author-name{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: normal;
     font-size: 15px;
 }
+
 .author-name{
     color: #d41c1c;
     font-size: 20px;

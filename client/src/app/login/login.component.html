@@ -1,0 +1,36 @@
+<div class="login-page-layout" >
+    <app-navbar></app-navbar>
+    <div class="container-fluid h-custom my-5">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample"/>
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 ">
+            <form (ngSubmit)="onSubmitLogin(loginForm)" #loginForm=ngForm> 
+                <div class='text-center mr-2'>
+                    <h4 class="mt-1 ">LOGIN</h4>
+                    <p>pleale enter your details</p>
+                </div>
+                <div class="form-outline mb-2">
+                    <label class="form-label" htmlFor="form3Example3">Email address</label>
+                    <input type="email" ngModel class="form-control" id="exampleInputEmail1" placeholder="Enter a valid email address"
+                     name = "email" aria-describedby="emailHelp" #email="ngModel"/>
+                </div>
+                <div class="form-outline mb-2">
+                    <label class="form-label" htmlFor="form3Example4">Password</label>
+                    <input type="password" ngModel id="form3Example4" class="form-control form-control-md" 
+                    placeholder="Enter password" name="password" #password = "ngModel"/>
+                </div>
+                <div class="text-center text-lg-start pt-3">
+                    <div class="d-grid">
+                        <button class="btn btn-primary" type="submit">Login</button>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <p>Not a member? <a href="/signup">Register</a></p>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>
