@@ -57,6 +57,12 @@
           <div class="book-image-inner-layout no-image" *ngIf="!selectedBook?.ImageUrl">
           </div>
         </div>
+        <div class="add-to-cart-layout">
+          <button class="add-to-cart-button" (click) = "addTocart(selectedBook)">
+            <i class="fa-solid fa-cart-shopping cart-icon "></i>
+            ADD TO CART
+          </button>
+        </div>
       </div>
       <div class="col-sm-8">
         <div class="book-items-layout">

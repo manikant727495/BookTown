@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from "../services/book.service";
 import {Book} from  '../Book';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Route,Router } from '@angular/router';
 
 @Component({
   selector: 'app-book-detail',
@@ -15,7 +15,8 @@ export class BookDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private bookService: BookService
+    private bookService: BookService,
+    private router: Router
   ){ }
 
   ngOnInit(): void {
@@ -23,6 +24,14 @@ export class BookDetailComponent implements OnInit {
     .subscribe((data:any) =>{
       this.selectedBook = data;
     });
+  }
+
+  addTocart(selectedBook:any){
+    if(localStorage.getItem('auth-token')){
+
+    }else{
+      this.router.navigateByUrl('/login');
+    }
   }
   
 }
