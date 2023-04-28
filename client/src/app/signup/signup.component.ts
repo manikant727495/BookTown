@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,13 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  onSubmitSignup(signupFormData:any){
-
+  onSubmitSignup(signupFormData:NgForm){
+    this.authService.createUser(signupFormData.value)
+    .subscribe((data:any)=>{
+      if(data.success){
+        console.log(data.success);
+      } else {
+        console.log(data.error);
+      }
+    })
   }
 
 }

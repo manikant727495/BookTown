@@ -8,20 +8,20 @@ import { CartService } from '../services/cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
- books:Book[]=[];
-   imageWidth: number = 50;
+  books: Book[] = [];
+  imageWidth: number = 50;
   imageMargin: number = 2;
-  constructor(private cartService:CartService) { }
+  constructor(private cartService: CartService) { }
 
 
 
   ngOnInit(): void {
-   this.books = this.cartService.getbookcart();
+    this.cartService.getCartItem();
   }
-  onDelete(book:Book){
+
+  onDelete(book: Book) {
     let index = this.books.indexOf(book);
     this.books.splice(index, 1);
-
   }
 
 }

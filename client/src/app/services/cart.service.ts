@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Book } from '../Book';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -7,12 +8,13 @@ import { Book } from '../Book';
 export class CartService {
 
   public books:Book[]=[];
-  constructor() { }
-  setbookcart(data:Book){
-    this.books.push(data);
+  constructor(private httpClient: HttpClient){
+  }
+  getCartItem(){
+    
+  }
+  AddItemToCart(book:any){
+
   }
 
-  getbookcart(){
-   return this.books;
-  }
 }

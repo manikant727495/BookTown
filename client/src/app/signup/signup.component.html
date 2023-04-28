@@ -1,9 +1,6 @@
 <div class="signup-page-layout">
     <app-navbar></app-navbar>
     <div class="container-fluid h-custom ">
-      <div class='text-center mr-3'>
-        <h2 class="my-3 text-success">WELCOME TO INOTEBOOK</h2>
-      </div>
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-md-9 col-lg-6 col-xl-5">
           <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
@@ -17,35 +14,32 @@
             </div>
             <div class="mb-2">
                 <label htmlFor="exampleInputName" class="form-label">Name</label>
-                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter your Name" name = "name"   minLength={3}/>
+                <input ngModel type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter your Name" name = "name" #name = "ngModel"  minLength={3}/>
             </div>
             <div class="form-outline mb-2">
                 <label class="form-label" htmlFor="form3Example3">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter a valid email address" name = "email" aria-describedby="emailHelp" />
+                <input ngModel type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter a valid email address" name="email" #email = "ngModel"  aria-describedby="emailHelp" />
             </div>
 
-                <div class="form-outline mb-2">
-                <label class="form-label" htmlFor="form3Example4">Password</label>
-                <input type="password" id="form3Example4" class="form-control form-control-md" placeholder="Enter password" name="password" minLength={5} />
-                </div>
-                <div class="mb-2">
-                <label htmlFor="exampleInputPassword1" class="form-label">ConfirmPassword</label>
-                <input type="password" class="form-control" id="exampleInputcPassword1"name = "cpassword" placeholder="Confirm password" minLength={5} />
-                <!-- <small style={{color: "red"}}>{cPasswordError}</small> -->
-                </div>
+            <div class="form-outline mb-2">
+              <label class="form-label" htmlFor="form3Example4">Password</label>
+              <input ngModel type="password" id="form3Example4" class="form-control form-control-md" placeholder="Enter password" name="password" #password = "ngModel" minLength={5} />
+            </div>
+            <div class="mb-2">
+              <label htmlFor="exampleInputPassword1" class="form-label">ConfirmPassword</label>
+              <input ngModel type="password" class="form-control" id="exampleInputcPassword1"name = "cpassword" placeholder="Confirm password" #cpassword = "ngModel" minLength={5} />
+            </div>
 
-                <div class="text-center text-lg-start pt-3">
-                <div class="d-grid">
-                    <button class="btn btn-primary" type="submit">Register</button>
-                </div>
-                </div>
-
+            <div class="text-center text-lg-start pt-3">
+              <div class="d-grid">
+                  <button class="btn btn-primary" type="submit">Register</button>
+              </div>
+            </div>
             <div class="text-center mt-4">
                 <p>Already a member? <a href="/login">Login</a></p>
             </div>
           </form>
-          <!-- {msg !== ''?<Alert type = {type} msg = {msg}/>:''} -->
-          </div>
+        </div>
       </div>
     </div>
 </div>

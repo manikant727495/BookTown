@@ -28,6 +28,7 @@ app.use(express.static(path.join(__dirname,'public')));
 
 app.use('/api/auth',require('./routes/auth'));
 app.use('/api/books',require('./routes/books'));
+app.use('/api/cart',require('./routes/cart'));
 
 app.listen(port,()=>{
     console.log('server started at port:'+port);
