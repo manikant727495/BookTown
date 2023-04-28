@@ -29,7 +29,7 @@ router.put('/update/:id',(req, res)=>{
                     price:req.body.price,
                     starRating:req.body.starRating,
                     tag: req.body.tag
-                } }
+            }}
         ).then((result)=>{
             res.status(200).json(result)
     }).catch((err) => {console.warn(err)})
@@ -60,14 +60,11 @@ router.post('/addbook',(req, res, next)=>{
 //delete Book
 router.delete('/deletebook/:id',(req, res, next)=>{
     Book.deleteOne({_id:req.params.id},function(err,result){
-        if(err)
-        {
+        if(err) {
             res.json(err);
-        }
-        else{
+        } else {
             res.json(result);
-        }
-        
+        }  
     });
 });
 

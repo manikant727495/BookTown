@@ -26,12 +26,16 @@ export class BookDetailComponent implements OnInit {
     });
   }
 
-  addTocart(selectedBook:any){
+  addToCart(selectedBook:any){
     if(localStorage.getItem('auth-token')){
-
+      this.addItemToCart(selectedBook);
     }else{
       this.router.navigateByUrl('/login');
     }
+  }
+
+  addItemToCart(selectedBook:any){
+    this.CartService.addItemToCart();
   }
   
 }
