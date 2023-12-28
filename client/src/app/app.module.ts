@@ -18,6 +18,7 @@ import { SearchResultComponent } from './search-result/search-result.component';
 import { SearchResultItemComponent } from './search-result/search-result-item/search-result-item.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { CartItemComponent } from './cart/cart-item/cart-item.component';
 
 
 
@@ -36,6 +37,7 @@ import { SignupComponent } from './signup/signup.component';
     SearchResultItemComponent,
     LoginComponent,
     SignupComponent,
+    CartItemComponent,
   ],
   imports: [
     BrowserModule,

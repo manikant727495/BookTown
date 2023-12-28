@@ -11,12 +11,16 @@ export class CartComponent implements OnInit {
   books: Book[] = [];
   imageWidth: number = 50;
   imageMargin: number = 2;
+  cartItems: any;
   constructor(private cartService: CartService) { }
 
 
 
   ngOnInit(): void {
-    this.cartService.getCartItem();
+    const authToken = localStorage.getItem('auth-token');
+    this.cartService.getCartItem(authToken).subscribe((data)=>{
+        this.cartItems = data;
+    });
   }
 
   onDelete(book: Book) {

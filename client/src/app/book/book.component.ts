@@ -55,7 +55,7 @@ export class BookComponent implements OnInit {
   }
 
   addtocart(book:Book){
-    this.cartService.setbookcart(book);
+    // this.cartService.setbookcart(book);
   }
 
   deleteBook(book:any){

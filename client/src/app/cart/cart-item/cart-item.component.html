@@ -1,0 +1,38 @@
+<div class="cart-item-layout">
+    <div class="cart-item-inner-layout">
+        <div class="cart-item-image-layout">
+            <div class="cart-item-image-inner-layout" *ngIf="cartItem.ImageUrl">
+                <img [src]= cartItem.ImageUrl class="book-image"/>
+            </div>
+        </div>
+        <div class="cart-item-label">
+            <div class="cart-item-description cart-item-heading">
+                {{cartItem.book_name}}
+            </div>
+            <div class="cart-item-description">
+                <span class="cart-item-author-name">
+                    <span>by </span>
+                    <span class="author-name">{{cartItem.author_name ? cartItem.author_name : '--'}}</span>
+                </span>
+            </div>
+            <div class="cart-item-description">
+                <span class="star-rating">{{cartItem.starRating}} </span>
+                <img src="assets/images/star.svg" class="star-image"/>
+            </div>
+            <div class="cart-item-description">
+                <span class="free-delivery-text">Free Delivery</span>
+            </div>
+            <div class="cart-item-description">
+                <img src="assets/images/verified-icon.png" alt="verified" class="verified-icon-image"/>
+                <span class="verified-text">Verified</span>
+            </div>
+            <div class="cart-item-description">
+               <span class="cart-item-remove-text" (click) = deleteItemFromCart(cartItem)>REMOVE</span>
+            </div>
+        </div>
+        <div class="cart-item-description cart-item-price-description">
+            <span class="price-symbol">&#8377;</span>
+             <span class="cart-item-price">{{cartItem.price}} </span>
+        </div>
+    </div>
+</div>

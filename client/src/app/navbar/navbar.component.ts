@@ -9,9 +9,13 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   fromDashboard : boolean | undefined;
-  constructor(private Router: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  goToCart(){
+    this.router.navigateByUrl('/cart');
   }
 
 }

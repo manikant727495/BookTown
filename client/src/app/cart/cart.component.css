@@ -1,13 +1,36 @@
-.cart{
-    margin-left:40%;
+.cart-container{
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px #f9f9f9;
+}
 
+.shopping-cart-heading{
+    padding: 10px 0px;
+    border-bottom: 0.5px solid rgb(214, 207, 207);
 }
-h1{
-    width:180px;
-    background:blue;
-    color:white;
-    margin-top:5px;
-    padding:5px;
-    font-style:italic;
-    border-radius: 6px;
+
+.shopping-cart-text{
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-left: 20px;
 }
+
+.price-title{
+    float: right;
+    margin-right: 15px;
+    margin-top: 20px;
+    color: #565959;
+}
+
+.price{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.price-symbol{
+    position: relative;
+    bottom: 3px;
+    font-weight: 500;
+    font-size: 10px;
+}
+
